@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @game.cover.url(:thumb) %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @game.title %>
 </p>
@@ -33,11 +37,6 @@
 <p>
   <strong>Developer:</strong>
   <%= @game.developer.name %>
-</p>
-
-<p>
-  <strong>Cover:</strong>
-  <%= image_tag @game.cover.url(:medium) %>
 </p>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |

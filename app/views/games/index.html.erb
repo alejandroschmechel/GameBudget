@@ -25,8 +25,8 @@
         <td><%= game.relase_date %></td>
         <td><%= game.description %></td>
         <td><%= game.rating %></td>
-        <td><%= game.platform.name %></td>
-        <td><%= game.developer.name %></td>
+        <td><%= link_to game.platform.name, platform_path(game.platform) %></td>
+        <td><%= link_to game.developer.name, developer_path(game.developer) %></td>
         <td><%= image_tag game.cover.url(:thumb) %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>

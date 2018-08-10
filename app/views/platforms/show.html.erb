@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @platform.image.url(:thumb) %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @platform.name %>
@@ -16,8 +22,12 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @platform.image.url(:medium) %>
+  <strong>Games:</strong>
+  <ul>
+    <% @platform.games.each do |game| %>
+      <li><%= game.title %> <%= link_to "Details", game_path(game) %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_platform_path(@platform) %> |
