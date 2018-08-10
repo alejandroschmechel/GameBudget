@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  price: 1.5
+  relase_date: 2018-08-10
+  description: MyString
+  rating: 1
+
+two:
+  title: MyString
+  price: 1.5
+  relase_date: 2018-08-10
+  description: MyString
+  rating: 1

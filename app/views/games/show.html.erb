@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @game.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @game.price %>
+</p>
+
+<p>
+  <strong>Relase date:</strong>
+  <%= @game.relase_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @game.description %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @game.rating %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @game.platform.name %>
+</p>
+
+<p>
+  <strong>Developer:</strong>
+  <%= @game.developer.name %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= image_tag @game.cover.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
